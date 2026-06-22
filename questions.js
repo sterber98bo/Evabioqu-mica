@@ -791,5 +791,556 @@ const quizQuestions = [
     question: "¿Por qué es de suma importancia proteger la muestra de líquido amniótico de la luz cuando se determina bilirrubina para evaluar la enfermedad hemolítica?",
     options: ["Porque la bilirrubina es fotosensible y se destruye rápidamente por la luz, disminuyendo falsamente su valor.", "Porque la luz induce la cristalización instantánea de las proteínas amnióticas.", "Porque la luz provoca la proliferación de bacterias termófilas de forma masiva."],
     correct: 0
+  },
+  {
+    id: 131,
+    pregunta: "¿Cuál es el tiempo aproximado necesario para la elaboración y transferencia de espermatozoides antes de la eyaculación?",
+    opciones: [
+      "1 mes",
+      "Casi 3 meses",
+      "15 días",
+      "6 meses"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 132,
+    pregunta: "¿Cuál es el orden correcto de las vías excretoras que recorre el semen tras el canal eyaculador?",
+    opciones: [
+      "Uretra peneana, membranosa y prostática",
+      "Uretra prostática, peneana y membranosa",
+      "Uretra prostática, membranosa y peneana",
+      "Uretra membranosa, prostática y peneana"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 133,
+    pregunta: "¿Qué glándulas aportan aproximadamente 0.2 ml a la secuencia eyaculadora inicial?",
+    opciones: [
+      "Vesículas seminales",
+      "Próstata",
+      "Glándulas de Littré y bulbo-ureterales",
+      "Ampolla epididimaria"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 134,
+    pregunta: "¿Cuál es el volumen normal promedio de una muestra de semen obtenida por masturbación?",
+    opciones: [
+      "1 a 2 ml",
+      "3 ml (rango 2 a 6 ml)",
+      "10 ml",
+      "0.5 a 1.5 ml"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 135,
+    pregunta: "¿En qué rango de tiempo se produce normalmente la licuación del semen a temperatura de laboratorio (18 a 25°C)?",
+    opciones: [
+      "Inmediatamente",
+      "Entre 5 y 20 minutos",
+      "Después de 1 hora",
+      "45 minutos"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 136,
+    pregunta: "¿Cuál es la densidad normal del semen según la guía?",
+    opciones: [
+      "1.000 a 1.002 g/ml",
+      "1.010 a 1.020 g/ml",
+      "1.002 a 1.004 g/ml",
+      "1.050 g/ml"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 137,
+    pregunta: "El pH normal del semen es ligeramente alcalino, situándose entre:",
+    opciones: [
+      "6.5 y 7.0",
+      "7.2 y 7.8",
+      "8.0 y 8.5",
+      "5.5 y 6.0"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 138,
+    pregunta: "¿Cuál es el ion que presenta una elevada concentración en el semen y es de origen exclusivamente prostático?",
+    opciones: [
+      "Calcio (Ca)",
+      "Magnesio (Mg)",
+      "Zinc (Zn)",
+      "Sodio (Na)"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 139,
+    pregunta: "En comparación con el suero sanguíneo, la concentración de Sodio (Na) en el semen es:",
+    opciones: [
+      "Mayor",
+      "Igual",
+      "Menor",
+      "El doble"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 140,
+    pregunta: "¿Cuál es el azúcar considerado la principal fuente energética de los espermatozoides?",
+    opciones: [
+      "Glucosa",
+      "Fructosa",
+      "Sacarosa",
+      "Maltosa"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 141,
+    pregunta: "¿Qué tipo de correlación existe entre la concentración de fructosa y la movilidad espermática?",
+    opciones: [
+      "Correlación positiva",
+      "No existe correlación",
+      "Correlación negativa",
+      "Correlación directa"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 142,
+    pregunta: "¿Qué glándula es the principal responsable de la secreción de citrato (ácido cítrico) en el semen?",
+    opciones: [
+      "Vesículas seminales",
+      "Próstata",
+      "Glándula de Littré",
+      "Testículos"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 143,
+    pregunta: "El valor de referencia del ácido cítrico en el semen es de:",
+    opciones: [
+      "10 a 50 mg/dl",
+      "180 a 840 mg/dl",
+      "1000 mg/dl",
+      "5 a 15 mg/dl"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 144,
+    pregunta: "¿Qué compuesto lipídico participa en la conservación de los espermatozoides y se encuentra en el semen?",
+    opciones: [
+      "Colesterol",
+      "Triglicéridos",
+      "Lecitinas",
+      "Esfingomielina"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 145,
+    pregunta: "La hidrólisis de la glicerofosforilcolina permite identificar manchas de esperma mediante la formación de:",
+    opciones: [
+      "Cristales de Charcot",
+      "Cristales de Florencia",
+      "Cristales de oxalato",
+      "Cristales de ácido úrico"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 146,
+    pregunta: "¿Qué función principal desempeña la carnitina en el semen?",
+    opciones: [
+      "Aportar color al semen",
+      "Maduración y adquisición de potencial para la movilidad",
+      "Actuar como agente oxidante",
+      "Regular el pH alcalino"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 147,
+    pregunta: "¿Qué cristales se forman espontáneamente por la oxidación de la espermina cuando el semen se deja en un portaobjetos?",
+    opciones: [
+      "Cristales de Florencia",
+      "Cristales de Charcot",
+      "Cristales de colesterol",
+      "Cristales de fosfato"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 148,
+    pregunta: "En casos de patología prostática (prostatitis), ¿qué fracción proteica suele aumentar en la electroforesis?",
+    opciones: [
+      "Albúmina",
+      "Alfa globulinas",
+      "Gammaglobulinas",
+      "Beta globulinas"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 149,
+    pregunta: "¿Cuál es la vida media de las prostaglandinas en el plasma seminal?",
+    opciones: [
+      "1 a 3 minutos",
+      "1 hora",
+      "24 horas",
+      "10 a 15 minutos"
+    ],
+    respuestaCorrecta: "a"
+  },
+  {
+    id: 150,
+    pregunta: "¿Qué azúcar es el marcador más específico de la secreción de las vesículas seminales?",
+    opciones: [
+      "Glucosa",
+      "Inositol",
+      "Fructosa",
+      "Sorbitol"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 151,
+    pregunta: "La presencia de niveles nulos de fructosa y carnitina es indicativo de:",
+    opciones: [
+      "Prostatitis",
+      "Agenesia vesículo-diferencial",
+      "Infección bacteriana",
+      "Hipertrofia prostática"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 152,
+    pregunta: "¿Qué indica la presencia de una \"polinucleosis\" en el eyaculado?",
+    opciones: [
+      "Alta fertility",
+      "Reacción inflamatoria o infección bacteriana",
+      "Obstrucción de las vías",
+      "Exceso de testosterona"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 153,
+    pregunta: "El moco cervical se vuelve filamentoso y penetrable para los espermatozoides bajo la influencia de:",
+    opciones: [
+      "Progesterona",
+      "Estrógenos",
+      "Testosterona",
+      "Cortisol"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 154,
+    pregunta: "¿Qué hormona transforma el moco cervical, espesándolo y provocando la desaparición de su filancia?",
+    opciones: [
+      "Estradiol",
+      "LH",
+      "Progesterona",
+      "FSH"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 155,
+    pregunta: "La prueba que aprecia la velocidad ascensional de los espermatozoides a través del moco cervical se denomina:",
+    opciones: [
+      "Prueba de Papanicolaou",
+      "Prueba de Sims Hubner",
+      "Prueba de Florencia",
+      "Técnica de Giemsa"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 156,
+    pregunta: "¿Cuál es el pH óptimo del moco cervical para favorecer la migración espermática?",
+    opciones: [
+      "4.0 a 5.0",
+      "7.0 a 8.5",
+      "9.0 a 10.0",
+      "6.0 a 6.5"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 157,
+    pregunta: "¿Qué longitud alcanza habitualmente el \"hilo\" del moco cervical (filosidad) el día de la ovulación?",
+    opciones: [
+      "1 cm",
+      "8 cm",
+      "20 cm",
+      "3 cm"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 158,
+    pregunta: "Gracias a la glucosa en el moco cervical, ¿cuánto tiempo pueden sobrevivir los espermatozoides por término medio?",
+    opciones: [
+      "2 a 4 horas",
+      "12 horas",
+      "24 a 48 horas",
+      "7 días"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 159,
+    pregunta: "¿Qué proteína del moco cervical tiene la función de proteger la cavidad uterina frente a bacterias?",
+    opciones: [
+      "Albúmina",
+      "Lactoferrina",
+      "Mucina",
+      "Hemoglobina"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 160,
+    pregunta: "Un color rojo o castaño en el semen es indicativo de:",
+    opciones: [
+      "Piospermia",
+      "Hemospermia",
+      "Astenozoospermia",
+      "Teratozoospermia"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 161,
+    pregunta: "El término médico para designar la carencia total de semen es:",
+    opciones: [
+      "Azoospermia",
+      "Hipospermia",
+      "Aspermia",
+      "Oligospermia"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 162,
+    pregunta: "¿Cuál es la viscosidad (filancia) normal del semen medida con una varilla de vidrio?",
+    opciones: [
+      "1 a 2 mm",
+      "5 a 10 mm",
+      "50 mm",
+      "0 mm"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 163,
+    pregunta: "En el examen microscópico, el Grado 3 de motilidad corresponde a:",
+    opciones: [
+      "Movimiento inactivo",
+      "Movimiento semiactivo",
+      "Movimiento activo",
+      "Movimiento de balanceo"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 164,
+    pregunta: "Se considera un eyaculado normal cuando el porcentaje de espermatozoides móviles a los 30-60 minutos es del:",
+    opciones: [
+      "100%",
+      "90% (aceptando hasta 70%)",
+      "50%",
+      "20%"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 165,
+    pregunta: "La \"Prueba Vital\" que utiliza Eosina al 5% sirve para teñir:",
+    opciones: [
+      "Solo los espermatozoides vivos",
+      "Solo los espermatozoides muertos",
+      "El moco cervical",
+      "Las bacterias presentes"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 166,
+    pregunta: "¿Qué reactivo se utiliza en la técnica de Mcomber para inmovilizar a los espermatozoides y facilitar su recuento?",
+    opciones: [
+      "Alcohol al 70%",
+      "Formol",
+      "Agua destilada pura",
+      "Ácido acético"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 167,
+    pregunta: "En la medición de cantidad, si se realiza una dilución 1/10 y se cuentan 5 cuadrantes, se debe multiplicar por el Factor:",
+    opciones: [
+      "1",
+      "2",
+      "4",
+      "10"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 168,
+    pregunta: "La disminución de la cantidad de espermatozoides (por debajo de los valores normales) se denomina:",
+    opciones: [
+      "Azoospermia",
+      "Oligozoospermia",
+      "Piospermia",
+      "Teratozoospermia"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 169,
+    pregunta: "¿Cuál de las siguientes tinciones NO se menciona para el estudio de la morfología espermática?",
+    opciones: [
+      "Giemsa",
+      "Papanicolaou",
+      "Azul de metileno",
+      "Tinción de Gram"
+    ],
+    respuestaCorrecta: "d"
+  },
+  {
+    id: 170,
+    pregunta: "Un espermatozoide normal consta de las siguientes partes:",
+    opciones: [
+      "Cabeza y cola únicamente",
+      "Cabeza ovalada, cuello, segmento intermedio y cola",
+      "Cabeza redonda, cuerpo y flagelo",
+      "Núcleo y acrosoma solamente"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 171,
+    pregunta: "¿Qué anomalía morfológica se describe como un espermatozoide con dos cabezas?",
+    opciones: [
+      "Macrocefálico",
+      "Microcefálico",
+      "Bicefálico",
+      "Atípico"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 172,
+    pregunta: "En la determinación de la capacidad fecundante, si la fertilidad es óptima, la decoloración del colorante se produce en:",
+    opciones: [
+      "5 minutos",
+      "15 a 30 minutos",
+      "60 minutos",
+      "2 horas"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 173,
+    pregunta: "¿Cuál es el valor de referencia para la Fructosa expresado en 100 ml de semen?",
+    opciones: [
+      "10 a 20 mg",
+      "200 a 400 mg",
+      "800 mg",
+      "1 a 5 mg"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 174,
+    pregunta: "El valor de referencia de la Fosfatasa Ácida en el semen es de:",
+    opciones: [
+      "100 a 500 U",
+      "1000 a 2500 Unidades King Armstrong/mm",
+      "0 U",
+      "5000 U"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 175,
+    pregunta: "¿Cuál es el valor de referencia del Ácido Ascórbico en 100 ml de semen?",
+    opciones: [
+      "10 a 13 mg",
+      "100 mg",
+      "1 mg",
+      "50 mg"
+    ],
+    respuestaCorrecta: "a"
+  },
+  {
+    id: 176,
+    pregunta: "¿Qué marcador se utiliza para medir el grado de actividad hormonal en el semen?",
+    opciones: [
+      "Ácido cítrico",
+      "Zinc",
+      "Fructosa",
+      "Magnesio"
+    ],
+    respuestaCorrecta: "c"
+  },
+  {
+    id: 177,
+    pregunta: "La técnica para medir la actividad de la fosfatasa ácida se basa en la liberación de:",
+    opciones: [
+      "Glucosa",
+      "p-nitrofenol",
+      "Aminoácidos",
+      "Oxígeno"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 178,
+    pregunta: "El aspecto del semen recién eyaculado es:",
+    opciones: [
+      "Homogéneo y transparente",
+      "Heterogéneo",
+      "Líquido como el agua",
+      "Rojo intenso"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 179,
+    pregunta: "¿Qué causa adquirida puede provocar azoospermia según el texto?",
+    opciones: [
+      "Consumo de vitaminas",
+      "Procesos inflamatorios por gérmenes (gonococos, colibacilos)",
+      "Exceso de ejercicio",
+      "Dieta rica en azúcares"
+    ],
+    respuestaCorrecta: "b"
+  },
+  {
+    id: 180,
+    pregunta: "En el recuento total, el número de espermatozoides multiplicado por el volumen en ml da como resultado:",
+    opciones: [
+      "Espermatozoides por mm",
+      "Espermatozoides totales en millones",
+      "Porcentaje de movilidad",
+      "Grado de viabilidad"
+    ],
+    respuestaCorrecta: "b"
   }
-]; 
+];
+
