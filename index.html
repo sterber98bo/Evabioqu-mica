@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un quiz interactivo y dinámico con preguntas de opción múltiple, cronómetro integrado y un diseño moderno y responsivo para poner a prueba tus conocimientos.">
+    <title>QuizMania - Desafía tu Conocimiento</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Elements for Visual Richness -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <main class="app-container">
+        <!-- HEADER -->
+        <header class="app-header">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span>Quiz<span class="gradient-text">Mania</span></span>
+            </div>
+            <div class="theme-toggle-container">
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema de color" title="Cambiar tema">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- MAIN CARD -->
+        <section class="glass-card" id="main-card">
+            
+            <!-- 1. START SCREEN -->
+            <div id="start-screen" class="screen-view active">
+                <div class="welcome-content">
+                    <h1 class="welcome-title">Examen de <br><span class="gradient-text">Bioquímica</span></h1>
+                    <p class="welcome-subtitle">Ponte a prueba con nuestro simulador interactivo de Bioquímica. Tienes 30 segundos por pregunta. ¿Estás listo para el desafío?</p>
+                    
+                    <div class="user-input-group">
+                        <label for="username" class="input-label">Escribe tu nombre</label>
+                        <input type="text" id="username" placeholder="Ej. Alex" maxlength="15" autocomplete="off" required>
+                    </div>
+
+                    <button id="start-btn" class="primary-btn">
+                        <span>Iniciar Examen</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-arrow">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. QUIZ SCREEN -->
+            <div id="quiz-screen" class="screen-view">
+                <!-- Progress & Timer Header -->
+                <div class="quiz-progress-bar-container">
+                    <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+                </div>
+
+                <div class="quiz-meta">
+                    <div class="question-tracker">
+                        <span id="current-question-num">01</span>/<span id="total-questions-num">08</span>
+                        <span class="category-tag">Bioquímica</span>
+                    </div>
+                    
+                    <div class="timer-wrapper">
+                        <!-- SVG Circular Progress Timer -->
+                        <svg class="timer-svg" viewBox="0 0 80 80">
+                            <circle class="timer-bg" cx="40" cy="40" r="34"></circle>
+                            <circle class="timer-progress" id="timer-progress" cx="40" cy="40" r="34"></circle>
+                        </svg>
+                        <span class="timer-text" id="timer-text">30</span>
+                    </div>
+                </div>
+
+                <!-- Question Area -->
+                <div class="question-container">
+                    <h2 class="question-text" id="question-text">Cargando pregunta...</h2>
+                </div>
+
+                <!-- Options List -->
+                <div class="options-grid" id="options-container">
+                    <!-- Options will be generated via Javascript -->
+                </div>
+
+                <!-- Quiz Screen Footer -->
+                <div class="quiz-footer">
+                    <div class="feedback-msg" id="feedback-msg">
+                        <!-- Message will appear here (Correct/Incorrect) -->
+                    </div>
+                    <button id="next-btn" class="primary-btn pulse" style="visibility: hidden;">
+                        <span id="next-btn-text">Siguiente</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-arrow">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. RESULTS SCREEN -->
+            <div id="results-screen" class="screen-view">
+                <div class="results-header">
+                    <div class="results-badge-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trophy-icon">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                            <path d="M4 22h16"></path>
+                            <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path>
+                            <path d="M12 2a6 6 0 0 1 6 6v5a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8a6 6 0 0 1 6-6z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="results-title">¡Quiz Completado!</h2>
+                    <p class="results-username-msg" id="results-username">Felicidades, Jugador</p>
+                </div>
+
+                <!-- Score Radial Display -->
+                <div class="score-circle-container">
+                    <div class="score-circle">
+                        <span class="score-percentage" id="score-percentage">0%</span>
+                        <span class="score-fraction" id="score-fraction">0 / 0 correctas</span>
+                    </div>
+                </div>
+
+                <!-- Stats Cards Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card stat-correct">
+                        <span class="stat-value" id="stat-correct-count">0</span>
+                        <span class="stat-label">Correctas</span>
+                    </div>
+                    <div class="stat-card stat-incorrect">
+                        <span class="stat-value" id="stat-incorrect-count">0</span>
+                        <span class="stat-label">Incorrectas</span>
+                    </div>
+                    <div class="stat-card stat-points">
+                        <span class="stat-value" id="stat-points-score">0</span>
+                        <span class="stat-label">Puntos Totales</span>
+                    </div>
+                </div>
+
+                <!-- Detailed Answers Review -->
+                <div class="review-section">
+                    <button class="review-toggle-btn" id="review-toggle">
+                        <span>Ver revisión detallada</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-icon">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <div class="review-list collapsed" id="review-list">
+                        <!-- Filled dynamically by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="results-actions">
+                    <button id="restart-btn" class="primary-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="restart-icon">
+                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                        </svg>
+                        <span>Jugar de Nuevo</span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="app-footer">
+            <p>Creado para desafiar tu mente • Desarrollado con HTML, CSS & JS</p>
+        </footer>
+    </main>
+
+    <!-- Quiz Scripts -->
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
