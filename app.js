@@ -247,6 +247,36 @@ function updateThemeToggleUI(theme) {
 // ==========================================================================
 // QUIZ CONTROL FLOW
 // ==========================================================================
+function normalizeQuestion(q) {
+    if (!q) return null;
+    
+    // Normalizar texto de la pregunta (soporta 'question' y 'pregunta')
+    const questionText = q.question || q.pregunta || "";
+    
+    // Normalizar opciones (soporta 'options' y 'opciones')
+    const options = q.options || q.opciones || [];
+    
+    // Normalizar respuesta correcta (soporta índice numérico 'correct' e incisos de letras 'respuestaCorrecta' like 'a', 'b', 'c', 'd')
+    let correct = q.correct;
+    if (correct === undefined && q.respuestaCorrecta !== undefined) {
+        const val = q.respuestaCorrecta;
+        if (typeof val === 'number') {
+            correct = val;
+        } else if (typeof val === 'string') {
+            const cleanVal = val.trim().toLowerCase();
+            const letterIndices = { 'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4 };
+            correct = letterIndices[cleanVal] !== undefined ? letterIndices[cleanVal] : parseInt(cleanVal);
+        }
+    }
+    
+    return {
+        id: q.id,
+        question: questionText,
+        options: options,
+        correct: typeof correct === 'number' && !isNaN(correct) ? correct : 0
+    };
+}
+
 function startQuiz() {
     SoundFX.playClick();
 
@@ -254,8 +284,8 @@ function startQuiz() {
     const inputVal = el.usernameInput.value.trim();
     state.userName = inputVal !== "" ? inputVal : "Jugador";
 
-    // Cargar todas las preguntas del examen
-    state.questionsList = [...quizQuestions];
+    // Cargar y normalizar todas las preguntas del examen (soporta formatos antiguos y nuevos)
+    state.questionsList = quizQuestions.map(normalizeQuestion).filter(q => q !== null);
 
     // Mezclar las preguntas para que salgan en orden aleatorio (descomentar/comentar si se prefiere un orden fijo)
     shuffleArray(state.questionsList);
