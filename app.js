@@ -134,7 +134,7 @@ const el = {
     get startScreen() { return document.getElementById('start-screen'); },
     get quizScreen() { return document.getElementById('quiz-screen'); },
     get resultsScreen() { return document.getElementById('results-screen'); },
-    
+
     // Theme
     get themeToggle() { return document.getElementById('theme-toggle'); },
     get sunIcon() { return this.themeToggle?.querySelector('.sun-icon'); },
@@ -228,7 +228,7 @@ function toggleTheme() {
     SoundFX.playClick();
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
+
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeToggleUI(newTheme);
@@ -249,13 +249,13 @@ function updateThemeToggleUI(theme) {
 // ==========================================================================
 function normalizeQuestion(q) {
     if (!q) return null;
-    
+
     // Normalizar texto de la pregunta (soporta 'question' y 'pregunta')
     const questionText = q.question || q.pregunta || "";
-    
+
     // Normalizar opciones (soporta 'options' y 'opciones')
     const options = q.options || q.opciones || [];
-    
+
     // Normalizar respuesta correcta (soporta índice numérico 'correct' e incisos de letras 'respuestaCorrecta' like 'a', 'b', 'c', 'd')
     let correct = q.correct;
     if (correct === undefined && q.respuestaCorrecta !== undefined) {
@@ -268,7 +268,7 @@ function normalizeQuestion(q) {
             correct = letterIndices[cleanVal] !== undefined ? letterIndices[cleanVal] : parseInt(cleanVal);
         }
     }
-    
+
     return {
         id: q.id,
         question: questionText,
@@ -328,13 +328,13 @@ function loadQuestion(index) {
 
     // Render Options
     el.optionsContainer.innerHTML = '';
-    
+
     // Make a copy of options with their original indices
     const optionsWithIndices = currentQuestion.options.map((opt, optIndex) => ({
         text: opt,
         originalIndex: optIndex
     }));
-    
+
     // Optional: We can shuffle options to prevent positional memorization!
     shuffleArray(optionsWithIndices);
 
@@ -366,7 +366,7 @@ function loadQuestion(index) {
 
 function selectOption(selectedIdx, selectedElement) {
     if (state.isAnswered) return;
-    
+
     // Stop Timer
     clearInterval(state.timerInterval);
     state.isAnswered = true;
@@ -396,7 +396,7 @@ function selectOption(selectedIdx, selectedElement) {
         // Success Sound and style
         SoundFX.playCorrect();
         selectedElement.classList.add('correct');
-        
+
         // Speed bonus points logic: Max 20 points, min 10 points.
         const speedRatio = state.timeLeft / state.timerTotalDuration; // 1 at start, 0 at end
         const speedBonus = Math.round(speedRatio * 10);
@@ -414,12 +414,12 @@ function selectOption(selectedIdx, selectedElement) {
     } else {
         // Error Sound and style
         SoundFX.playIncorrect();
-        
+
         // Highlight chosen as incorrect
         selectedElement.classList.add('incorrect');
 
         // Highlight correct option in green as requested
-        const correctElement = Array.from(allOptionButtons).find(btn => 
+        const correctElement = Array.from(allOptionButtons).find(btn =>
             parseInt(btn.getAttribute('data-index')) === correctIdx
         );
         if (correctElement) {
@@ -539,16 +539,14 @@ function updateTimerUI() {
     // Color shifting transitions
     if (state.timeLeft > 15) {
         el.timerProgress.style.stroke = 'var(--correct-color)';
+        el.timerText.style.animation = 'none';
     } else if (state.timeLeft > 5) {
         el.timerProgress.style.stroke = 'var(--warning-color)';
+        el.timerText.style.animation = 'none';
     } else {
         el.timerProgress.style.stroke = 'var(--incorrect-color)';
         // Pulsate timer text when time is low
         el.timerText.style.animation = 'pulseText 0.5s infinite alternate';
-    }
-
-    if (state.timeLeft > 5) {
-        el.timerText.style.animation = 'none';
     }
 }
 
@@ -589,13 +587,13 @@ function showResults() {
 
 function renderDetailedReview() {
     el.reviewList.innerHTML = '';
-    
+
     state.answersLog.forEach((item, index) => {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'review-item';
 
-        const userOptionText = item.userAnswerIdx !== -1 
-            ? item.options[item.userAnswerIdx] 
+        const userOptionText = item.userAnswerIdx !== -1
+            ? item.options[item.userAnswerIdx]
             : 'Sin responder (Tiempo agotado)';
         const correctOptionText = item.options[item.correctAnswerIdx];
 
@@ -648,11 +646,11 @@ function resetQuiz() {
 function switchScreen(fromScreen, toScreen) {
     fromScreen.style.opacity = '0';
     fromScreen.style.transform = 'translateY(-15px)';
-    
+
     setTimeout(() => {
         fromScreen.classList.remove('active');
         toScreen.classList.add('active');
-        
+
         // Wait minor delay to trigger reflow
         setTimeout(() => {
             toScreen.style.opacity = '1';
@@ -705,3 +703,4 @@ function handleKeyboardShortcuts(e) {
         }
     }
 }
+

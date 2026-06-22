@@ -459,7 +459,7 @@ const quizQuestions = [
   {
     id: 75,
     question: "¿Qué tipo de pleocitosis con predominio absoluto de neutrófilos (>80%) es característica de una Meningitis Bacteriana Aguda?",
-    options: ["Pleocitosis linfocitaria dens.", "Pleocitosis neutrofílica (polimorfonuclear).", "Pleocitosis eosinofílica severa."],
+    options: ["Pleocitosis linfocitaria densa.", "Pleocitosis neutrofílica (polimorfonuclear).", "Pleocitosis eosinofílica severa."],
     correct: 1
   },
   {
@@ -820,7 +820,7 @@ const quizQuestions = [
     opciones: [
       "Vesículas seminales",
       "Próstata",
-      "Glándulas de Littré y bulbo-ureterales",
+      "Glándulas de Littré y bulbo-uretrales",
       "Ampolla epididimaria"
     ],
     respuestaCorrecta: "c"
@@ -1343,4 +1343,5 @@ const quizQuestions = [
     respuestaCorrecta: "b"
   }
 ];
+
 
